@@ -1,0 +1,78 @@
+[
+  {
+    "model": "llama3.2:1b",
+    "total": 2,
+    "ok": 1,
+    "accuracy": 50.0,
+    "accuracy_ci": [
+      0.0945,
+      0.9055
+    ],
+    "hallucination": 0,
+    "hallucination_ci": [
+      0.0,
+      0.6576
+    ],
+    "wrong_content": 1,
+    "miss": 0,
+    "over_abstain": 0,
+    "results": [
+      {
+        "id": "mh01",
+        "cat": "multi_hop",
+        "status": "OK",
+        "verdict": "OK",
+        "confidence": 0.458,
+        "llm_used": false,
+        "preview": "Alice lives in Paris"
+      },
+      {
+        "id": "mh02",
+        "cat": "multi_hop",
+        "status": "OK",
+        "verdict": "WRONG_CONTENT",
+        "confidence": 0.445,
+        "llm_used": false,
+        "preview": "Bob is my boss"
+      }
+    ]
+  },
+  {
+    "model": "deepseek-coder:latest",
+    "total": 2,
+    "ok": 1,
+    "accuracy": 50.0,
+    "accuracy_ci": [
+      0.0945,
+      0.9055
+    ],
+    "hallucination": 0,
+    "hallucination_ci": [
+      0.0,
+      0.6576
+    ],
+    "wrong_content": 1,
+    "miss": 0,
+    "over_abstain": 0,
+    "results": [
+      {
+        "id": "mh01",
+        "cat": "multi_hop",
+        "status": "OK",
+        "verdict": "OK",
+        "confidence": 0.458,
+        "llm_used": false,
+        "preview": "Alice lives in Paris"
+      },
+      {
+        "id": "mh02",
+        "cat": "multi_hop",
+        "status": "OK",
+        "verdict": "WRONG_CONTENT",
+        "confidence": 0.445,
+        "llm_used": false,
+        "preview": "Bob is my boss"
+      }
+    ]
+  }
+]

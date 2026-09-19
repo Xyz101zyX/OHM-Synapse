@@ -1,0 +1,375 @@
+{
+  "metrics": {
+    "total": 36,
+    "ok": 34,
+    "halluc": 0,
+    "miss": 1,
+    "over_abstain": 1,
+    "hallucination_rate": 0.0,
+    "accuracy": 94.4,
+    "precision_abstain": 100.0,
+    "precision_respond": 88.9
+  },
+  "results": [
+    {
+      "id": "kp1",
+      "category": "known_personal",
+      "query": "what is the name of my cat",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "Zeca"
+    },
+    {
+      "id": "kp2",
+      "category": "known_personal",
+      "query": "where do I live",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "Curitiba"
+    },
+    {
+      "id": "kp3",
+      "category": "known_personal",
+      "query": "what is my favorite color",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "blue"
+    },
+    {
+      "id": "kp4",
+      "category": "known_personal",
+      "query": "when is my birthday",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "March 15"
+    },
+    {
+      "id": "kp5",
+      "category": "known_personal",
+      "query": "where do I work",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "Acme Corp"
+    },
+    {
+      "id": "up1",
+      "category": "unknown_personal",
+      "query": "what is the name of my fish",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "up2",
+      "category": "unknown_personal",
+      "query": "what is my passport number",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "up3",
+      "category": "unknown_personal",
+      "query": "what is my social security number",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "up4",
+      "category": "unknown_personal",
+      "query": "what is my bank account balance",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "up5",
+      "category": "unknown_personal",
+      "query": "what is my blood type",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "adv1",
+      "category": "adversarial",
+      "query": "what is the name of my purple elephant xylophone project",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "adv2",
+      "category": "adversarial",
+      "query": "who is my imaginary friend Kazimir the blue dragon",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "adv3",
+      "category": "adversarial",
+      "query": "describe my secret underground laboratory in Patagonia",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "adv4",
+      "category": "adversarial",
+      "query": "what is the password to my quantum vault",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "adv5",
+      "category": "adversarial",
+      "query": "who is my invisible friend who lives on Mars",
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "llm_used": false,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "conf1",
+      "category": "conflict",
+      "query": "what is my cat name",
+      "status": "CONFLICT",
+      "verdict": "OK",
+      "confidence": 0.819,
+      "llm_used": true,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='cat': 'my cat name is zeca' vs 'my cat name is rex'"
+    },
+    {
+      "id": "conf2",
+      "category": "conflict",
+      "query": "where do I live",
+      "status": "CONFLICT",
+      "verdict": "OK",
+      "confidence": 0.819,
+      "llm_used": true,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='live': 'i live in curitiba' vs 'i live in tokyo'"
+    },
+    {
+      "id": "conf3",
+      "category": "conflict",
+      "query": "what is my favorite color",
+      "status": "CONFLICT",
+      "verdict": "OK",
+      "confidence": 0.819,
+      "llm_used": true,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='favorite': 'my favorite color is blue' vs 'my favor"
+    },
+    {
+      "id": "conf4",
+      "category": "conflict",
+      "query": "where do I work",
+      "status": "CONFLICT",
+      "verdict": "OK",
+      "confidence": 0.819,
+      "llm_used": true,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='work': 'i work at acme corp' vs 'i work at globex'"
+    },
+    {
+      "id": "mh1",
+      "category": "multi_hop",
+      "query": "where does my sister live",
+      "status": "CONFLICT",
+      "verdict": "MISS",
+      "confidence": 0.819,
+      "llm_used": true,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='alice': 'alice is my sister' vs 'alice lives in par"
+    },
+    {
+      "id": "mh2",
+      "category": "multi_hop",
+      "query": "where does my boss work",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "Acme Corp"
+    },
+    {
+      "id": "mh3",
+      "category": "multi_hop",
+      "query": "when is my wife birthday",
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.885,
+      "llm_used": true,
+      "text_preview": "March 15"
+    },
+    {
+      "id": "mh4",
+      "category": "multi_hop",
+      "query": "what breed is my dog",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "text_preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "tmp1",
+      "category": "temporal",
+      "query": "/kairo",
+      "status": "KAIRO",
+      "verdict": "OK",
+      "confidence": 0.9,
+      "llm_used": false,
+      "text_preview": "uptime: 0.00 days\nevents: 1\nepisodes: 1\npending deadlines: 0"
+    },
+    {
+      "id": "tmp2",
+      "category": "temporal",
+      "query": "/timeline",
+      "status": "TIMELINE",
+      "verdict": "OK",
+      "confidence": 0.9,
+      "llm_used": false,
+      "text_preview": "last 24h - 1 events:\n  [2026-09-13 08:11:27] command: /timeline"
+    },
+    {
+      "id": "tmp3",
+      "category": "temporal",
+      "query": "/when project",
+      "status": "WHEN",
+      "verdict": "OK",
+      "confidence": 0.9,
+      "llm_used": false,
+      "text_preview": "events mentioning 'project':\n  2026-09-13 08:11:31 (0s ago) - command: /when project\n  2026-09-13 08:11:31 (0s ago) - command: /remember pro"
+    },
+    {
+      "id": "tmp4",
+      "category": "temporal",
+      "query": "/circadian",
+      "status": "CIRCADIAN",
+      "verdict": "OK",
+      "confidence": 0.9,
+      "llm_used": false,
+      "text_preview": "total events: 1\npeak hours: [8, 0, 1]\nquiet hours: [0, 1, 2]"
+    },
+    {
+      "id": "sc1",
+      "category": "source_crossing",
+      "query": "what is the capital of France",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "Paris\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "sc2",
+      "category": "source_crossing",
+      "query": "what is photosynthesis",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "Photosynthesis is the process by which plants convert light energy.\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "sc3",
+      "category": "source_crossing",
+      "query": "who wrote Hamlet",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "William Shakespeare\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "sc4",
+      "category": "source_crossing",
+      "query": "what is the boiling point of water",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "100 degrees Celsius\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "ek1",
+      "category": "external_known",
+      "query": "what is the largest planet",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "Jupiter\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "ek2",
+      "category": "external_known",
+      "query": "who discovered penicillin",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "Alexander Fleming\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "ek3",
+      "category": "external_known",
+      "query": "what is the speed of light",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "299,792,458 meters per second\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "ek4",
+      "category": "external_known",
+      "query": "what is DNA",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "DNA is the molecule that carries genetic information.\n\n[caution: low confidence, treat as tentative]"
+    },
+    {
+      "id": "ek5",
+      "category": "external_known",
+      "query": "what is machine learning",
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.516,
+      "llm_used": true,
+      "text_preview": "Machine learning is a subset of AI.\n\n[caution: low confidence, treat as tentative]"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "total": 12,
+  "ok": 0,
+  "halluc": 0,
+  "miss": 3,
+  "over_abstain": 8,
+  "wrong_content": 1,
+  "accuracy_ci": [
+    0.0,
+    0.2425007574992425
+  ],
+  "hallucination_ci": [
+    0.0,
+    0.2425007574992425
+  ],
+  "provider": "ollama",
+  "model": "llama3.2:1b",
+  "results": [
+    {
+      "id": "mh01",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my sister live",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh02",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my boss work",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh03",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "when is my wife birthday",
+      "status": "CONFLICT",
+      "verdict": "MISS",
+      "confidence": 0.694,
+      "llm_used": true,
+      "preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='birthday': 'my birthday is july 10' vs 'my birthday"
+    },
+    {
+      "id": "mh04",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "what breed is my dog",
+      "status": "CONFLICT",
+      "verdict": "MISS",
+      "confidence": 0.819,
+      "llm_used": true,
+      "preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='dog': 'my dog name is max' vs 'my dog name is rex'\n"
+    },
+    {
+      "id": "mh05",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my brother live",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh06",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my mother live",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh07",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my father work",
+      "status": "CONFLICT",
+      "verdict": "MISS",
+      "confidence": 0.819,
+      "llm_used": true,
+      "preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='work': 'i work at initech' vs 'i work at acme corp'"
+    },
+    {
+      "id": "mh08",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "what size is my fish",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh09",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "how old is my bird",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh10",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "where does my turtle live",
+      "status": "OK",
+      "verdict": "WRONG_CONTENT",
+      "confidence": 0.885,
+      "llm_used": true,
+      "preview": "Since the context doesn't specify where Sheldon lives, I'll respond accordingly."
+    },
+    {
+      "id": "mh11",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "what breed is my rabbit",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    },
+    {
+      "id": "mh12",
+      "cat": "multi_hop",
+      "subcat": "",
+      "query": "how old is my hamster",
+      "status": "ABSTAIN",
+      "verdict": "OVER_ABSTAIN",
+      "confidence": 0.0,
+      "llm_used": true,
+      "preview": "I do not have that information with sufficient confidence."
+    }
+  ]
+}

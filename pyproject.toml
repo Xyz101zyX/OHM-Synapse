@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ohm-synapse"
+version = "0.0.1"
+description = "Epistemic digital twin with anti-hallucination pipeline, E2EE chat, and distributed sync"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "OHM-Synapse Project" },
+]
+keywords = ["ai", "anti-hallucination", "digital-twin", "e2ee", "mqtt", "epistemic"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security :: Cryptography",
+]
+
+dependencies = [
+    "requests>=2.31",
+    "psutil>=5.9",
+    "bcrypt>=4.0",
+    "pyyaml>=6.0",
+    "cryptography>=42.0",
+    "paho-mqtt>=2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+ui = ["gradio>=5.0"]
+embeddings = ["sentence-transformers>=3.0"]
+broker = ["amqtt>=0.11"]
+llm = []  # Ollama runs externally; no python dep needed
+full = [
+    "gradio>=5.0",
+    "sentence-transformers>=3.0",
+    "amqtt>=0.11",
+]
+dev = [
+    "mypy>=1.10",
+    "types-requests",
+    "pytest>=8.0",
+]
+
+[project.scripts]
+ohm = "ohm_cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ohm-synapse/ohm-synapse"
+Documentation = "https://github.com/ohm-synapse/ohm-synapse/blob/main/README.md"
+
+[tool.setuptools]
+py-modules = [
+    "ohm_synapse",
+    "ohm_chat",
+    "ohm_kairos",
+    "ohm_embeddings",
+    "ohm_ui",
+    "ohm_cli",
+    "ohm_auth",
+    "run_peer",
+    "run_local_broker",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ohm*"]
+exclude = ["test_*", "benchmark_*", "mypy_*", "apply_*", "fix_*", "run_*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.json", "*.pem"]

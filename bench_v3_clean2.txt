@@ -1,0 +1,104 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+==============================================================================
+OHM ANTI-HALLUCINATION BENCHMARK v3 - 120 cases
+==============================================================================
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2225.59it/s]
+C:\Ohm_Project\ohm_embeddings.py:45: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  return model.get_sentence_embedding_dimension()
+[2026-09-17 19:47:12,026] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:16,408] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:20,834] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:25,150] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:29,532] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:33,943] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:38,322] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:42,637] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:47,044] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:51,403] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:47:55,771] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:00,187] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:04,545] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:08,894] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:13,318] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:17,747] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:22,105] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:26,540] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:30,932] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:35,369] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:40,011] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:44,391] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:48,735] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:53,043] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:48:57,392] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:01,666] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:05,963] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:10,250] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:14,537] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:18,823] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:23,124] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:27,426] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:31,692] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:36,033] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:40,330] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:44,617] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:49,007] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:53,454] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:49:57,815] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:02,090] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:06,371] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:10,608] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:14,996] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:19,370] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:23,669] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:27,962] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:32,241] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:36,518] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:40,838] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:45,162] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:49,490] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:53,755] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:50:58,043] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:02,332] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:06,656] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:10,914] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:15,413] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:19,920] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:24,397] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:28,905] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:33,345] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:37,787] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:42,555] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:47,029] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:51,527] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:51:55,947] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:00,406] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:04,867] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:09,394] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:13,935] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:22,419] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:26,900] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:31,468] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:36,053] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:40,716] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:45,228] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:49,659] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:54,315] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:52:59,069] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:03,496] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:07,699] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:11,936] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:16,167] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:20,358] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:24,571] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:28,740] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:32,985] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:37,456] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:41,937] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:46,411] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:50,736] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:55,123] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:53:59,519] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:54:03,905] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:54:08,438] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:54:12,776] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+^C

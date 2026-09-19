@@ -1,0 +1,68 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+==============================================================================
+OHM ANTI-HALLUCINATION BENCHMARK v3 - 120 cases
+==============================================================================
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3427.37it/s]
+C:\Ohm_Project\ohm_embeddings.py:45: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  return model.get_sentence_embedding_dimension()
+[2026-09-17 19:42:25,433] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:29,789] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:34,123] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:38,482] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:42,833] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:47,159] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:51,477] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:42:55,819] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:00,232] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:04,682] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:08,983] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:13,329] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:17,641] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:21,979] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[2026-09-17 19:43:26,383] WARNING MQTT connection failed: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+  [ 10/120] elapsed=50s  last=kp10
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\socket.py", line 859, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Ohm_Project\benchmark_v3.py", line 420, in <module>
+    main()
+    ~~~~^^
+  File "C:\Ohm_Project\benchmark_v3.py", line 343, in main
+    brain = make_brain()
+  File "C:\Ohm_Project\benchmark_v3.py", line 98, in make_brain
+    brain = ohm.OHMSynapse(config=cfg)
+  File "C:\Ohm_Project\ohm_synapse.py", line 184, in __init__
+    self.mqtt = MQTTClient(
+                ~~~~~~~~~~^
+        dist.get("mqtt_broker", "localhost"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Ohm_Project\ohm\mqtt_transport.py", line 142, in __init__
+    self.client.connect(self.broker, self.port, keepalive=60)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\paho\mqtt\client.py", line 1435, in connect
+    return self.reconnect()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\paho\mqtt\client.py", line 1598, in reconnect
+    self._sock = self._create_socket()
+                 ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\paho\mqtt\client.py", line 4609, in _create_socket
+    sock = self._create_socket_connection()
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\paho\mqtt\client.py", line 4640, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\socket.py", line 866, in create_connection
+    exceptions.clear()  # raise only the last error
+    ~~~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+^C

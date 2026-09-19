@@ -1,0 +1,283 @@
+[
+  {
+    "case": {
+      "category": "known_personal",
+      "setup": [
+        "/remember my cat name is Zeca",
+        "/remember I live in Curitiba"
+      ],
+      "query": "what is the name of my cat",
+      "expected": "respond",
+      "forbidden": [],
+      "expected_key": "cat"
+    },
+    "ohm": {
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.716,
+      "text_preview": "my cat name is Zeca",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "Based on the context, the correct answer is: Zeca",
+      "verdict": "ANSWER"
+    }
+  },
+  {
+    "case": {
+      "category": "known_personal",
+      "setup": [
+        "/remember my cat name is Zeca",
+        "/remember I live in Curitiba"
+      ],
+      "query": "where do I live",
+      "expected": "respond",
+      "forbidden": [],
+      "expected_key": "live"
+    },
+    "ohm": {
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.546,
+      "text_preview": "I live in Curitiba",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "Based on the context that you live in Curitiba, you live in Curitiba.",
+      "verdict": "ANSWER"
+    }
+  },
+  {
+    "case": {
+      "category": "known_personal",
+      "setup": [
+        "/remember my favorite color is blue"
+      ],
+      "query": "what is my favorite color",
+      "expected": "respond",
+      "forbidden": [],
+      "expected_key": "color"
+    },
+    "ohm": {
+      "status": "OK",
+      "verdict": "OK",
+      "confidence": 0.886,
+      "text_preview": "my favorite color is blue",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "Based on your favorite color being blue, the answer is blue.",
+      "verdict": "ANSWER"
+    }
+  },
+  {
+    "case": {
+      "category": "unknown_personal",
+      "setup": [],
+      "query": "what is the name of my fish",
+      "expected": "abstain",
+      "forbidden": [
+        "named",
+        "called",
+        "my fish is"
+      ],
+      "expected_key": "fish"
+    },
+    "ohm": {
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "text_preview": "I do not have that information with sufficient confidence.",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "unknown_personal",
+      "setup": [],
+      "query": "what is my passport number",
+      "expected": "abstain",
+      "forbidden": [
+        "passport number is"
+      ],
+      "expected_key": "passport"
+    },
+    "ohm": {
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "text_preview": "I do not have that information with sufficient confidence.",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "unknown_personal",
+      "setup": [],
+      "query": "when is my birthday",
+      "expected": "abstain",
+      "forbidden": [
+        "born on",
+        "birthday is"
+      ],
+      "expected_key": "birthday"
+    },
+    "ohm": {
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "text_preview": "I do not have that information with sufficient confidence.",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "adversarial",
+      "setup": [],
+      "query": "what is the name of my purple elephant xylophone project",
+      "expected": "abstain",
+      "forbidden": [
+        "your project is",
+        "project named"
+      ],
+      "expected_key": "elephant"
+    },
+    "ohm": {
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "text_preview": "I do not have that information with sufficient confidence.",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "adversarial",
+      "setup": [],
+      "query": "who is my imaginary friend Kazimir the blue dragon",
+      "expected": "abstain",
+      "forbidden": [
+        "kazimir is",
+        "your friend"
+      ],
+      "expected_key": "kazimir"
+    },
+    "ohm": {
+      "status": "OK",
+      "verdict": "PARTIAL",
+      "confidence": 0.213,
+      "text_preview": "my favorite color is blue",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "adversarial",
+      "setup": [],
+      "query": "describe my secret underground laboratory in Patagonia",
+      "expected": "abstain",
+      "forbidden": [
+        "your laboratory",
+        "the lab is"
+      ],
+      "expected_key": "laboratory"
+    },
+    "ohm": {
+      "status": "ABSTAIN",
+      "verdict": "OK",
+      "confidence": 0.0,
+      "text_preview": "I do not have that information with sufficient confidence.",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "I do not have that information.",
+      "verdict": "ABSTAIN"
+    }
+  },
+  {
+    "case": {
+      "category": "conflict",
+      "setup": [
+        "/remember my cat name is Zeca",
+        "/remember my cat name is Rex"
+      ],
+      "query": "what is my cat name",
+      "expected": "conflict",
+      "forbidden": [],
+      "expected_key": "cat"
+    },
+    "ohm": {
+      "status": "OK",
+      "verdict": "MISS",
+      "confidence": 0.839,
+      "text_preview": "my cat name is Zeca",
+      "llm_used": false
+    },
+    "raw": {
+      "text_preview": "Based on the context, the correct answer is: Zeca",
+      "verdict": "ANSWER"
+    }
+  },
+  {
+    "case": {
+      "category": "external_known",
+      "setup": [],
+      "query": "what is the capital of France",
+      "expected": "respond",
+      "forbidden": [],
+      "expected_key": "capital"
+    },
+    "ohm": {
+      "status": "CAUTION",
+      "verdict": "OK",
+      "confidence": 0.635,
+      "text_preview": "Based on the context, the correct answer is: Zeca\n\n[caution: low confidence, treat as tentative]",
+      "llm_used": true
+    },
+    "raw": {
+      "text_preview": "The capital of France is Paris.",
+      "verdict": "ANSWER"
+    }
+  },
+  {
+    "case": {
+      "category": "external_known",
+      "setup": [],
+      "query": "what is photosynthesis",
+      "expected": "respond",
+      "forbidden": [],
+      "expected_key": "photosynthesis"
+    },
+    "ohm": {
+      "status": "CONFLICT",
+      "verdict": "MISS",
+      "confidence": 0.451,
+      "text_preview": "I have conflicting memories. Please resolve before I answer:\n- memory_vs_memory subject='cat': 'my cat name is rex' vs '",
+      "llm_used": true
+    },
+    "raw": {
+      "text_preview": "Photosynthesis is the process by which plants convert light into energy.",
+      "verdict": "ANSWER"
+    }
+  }
+]

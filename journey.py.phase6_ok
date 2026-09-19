@@ -1,0 +1,42 @@
+"""Journey overview - last result of each phase."""
+
+from __future__ import annotations
+
+import pathlib
+import re
+
+ROOT = pathlib.Path(__file__).resolve().parent
+TRAIL = ROOT / ".trail"
+LINE_RE = re.compile(r"checked=(\d+) ok=(\d+) failed=(\d+)")
+
+PHASES = ("phase2", "phase3", "phase4", "phase5", "phase6",
+          "phase7", "phase8", "phase9", "phase10", "phase11")
+
+
+def summarize(log):
+    checked = ok = failed = 0
+    for line in log.read_text(encoding="utf-8", errors="replace").splitlines():
+        m = LINE_RE.search(line)
+        if m:
+            checked += int(m.group(1))
+            ok += int(m.group(2))
+            failed += int(m.group(3))
+    return checked, ok, failed
+
+
+def last_of(phase):
+    logs = sorted(TRAIL.glob(f"{phase}_*.log")) if TRAIL.is_dir() else []
+    if not logs:
+        return "(not run)"
+    c, o, f = summarize(logs[-1])
+    return f"TOTAL checked={c} ok={o} failed={f}"
+
+
+def main():
+    print(f"# journey - {ROOT}\n")
+    for phase in PHASES:
+        print(f"{phase:<8}  {last_of(phase)}")
+
+
+if __name__ == "__main__":
+    main()

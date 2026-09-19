@@ -1,0 +1,9 @@
+import py_compile
+
+for f in files:
+    try:
+        py_compile.compile(str(f), doraise=True)
+        ok += 1
+    except py_compile.PyCompileError as e:
+        bad += 1
+        print(f"[FAIL] {f}:{e.msg}")

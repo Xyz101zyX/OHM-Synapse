@@ -1,0 +1,81 @@
+# Private keys — NEVER version
+*.pem
+*.key
+*.p12
+*.jks
+*.token
+private_key*
+*_key.pem
+*_key.key
+
+# MQTT certs and data
+mosquitto_certs/
+broker_data/
+mosquitto.db
+
+# Runtime state
+ohm_data/
+ohm_state/
+data/
+*.sqlite
+*.db
+ohm_persistent_memory_v1.json
+mem.json
+audit.jsonl
+export.json
+
+# Sessions
+sessions/
+
+# Environment
+.env
+.env.*
+secrets/
+config.local.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Models / binaries
+*.pt
+*.bin
+*.safetensors
+*.onnx
+models/
+cache/
+
+# Backups
+*.bak
+*.bak_*
+*.before_*
+*.pre_*
+*.duplicated
+*.stable_*
+_backups/
+snapshots/
+test_env/
+
+# Build artifacts
+build/
+dist/
+
+# Trail (uncomment if you want to keep it out)
+.trail/
+
+# Junk from shell redirections
+0.14s
+90
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp

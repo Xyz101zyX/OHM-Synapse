@@ -1,0 +1,132 @@
+"""FASE 3 unified check: syntax, typing, import."""
+
+from __future__ import annotations
+
+import argparse
+import ast
+import datetime as dt
+import pathlib
+import subprocess
+import sys
+
+ROOT = pathlib.Path(__file__).resolve().parent
+TRAIL = ROOT / ".trail"
+PACKAGE = "ohm"
+PKG_DIR = ROOT / PACKAGE
+
+
+def iter_py_files():
+    skip = {".venv", "venv", "__pycache__", "build", "dist", ".mypy_cache", ".git"}
+    return sorted(
+        p for p in ROOT.rglob("*.py")
+        if not any(part in skip or part.startswith(".") for part in p.parts)
+        and ".bak" not in p.name
+        and not p.name.endswith(".duplicated")
+    )
+
+
+def fmt(name, ok, bad):
+    return f"[{name}] checked={ok + bad} ok={ok} failed={bad}"
+
+
+def check_syntax():
+    ok = bad = 0
+    for f in iter_py_files():
+        try:
+            ast.parse(f.read_text(encoding="utf-8"), filename=str(f))
+            ok += 1
+        except SyntaxError as e:
+            bad += 1
+            print(f"  [FAIL] {f.relative_to(ROOT)}:{e.lineno}:{e.offset}: {e.msg}")
+        except UnicodeDecodeError as e:
+            bad += 1
+            print(f"  [FAIL] {f.relative_to(ROOT)}: {e}")
+    return ok, bad, True
+
+
+def check_mypy():
+    if not PKG_DIR.is_dir():
+        print(f"  [SKIP] package '{PACKAGE}/' not found")
+        return 0, 0, True
+
+    proc = subprocess.run(
+        [sys.executable, "-m", "mypy", PACKAGE,
+         "--ignore-missing-imports",
+         "--no-error-summary",
+         "--no-color-output"],
+        cwd=ROOT, capture_output=True, text=True,
+        encoding="utf-8", errors="replace",
+    )
+
+    if proc.returncode == 2 and "No module named mypy" in (proc.stderr + proc.stdout):
+        return 0, 0, False
+
+    errors = [l for l in proc.stdout.splitlines() if ": error:" in l]
+    bad_files = {l.split(":", 1)[0] for l in errors}
+
+    for line in errors[:40]:
+        print(f"  {line}")
+    if len(errors) > 40:
+        print(f"  ... (+{len(errors) - 40} more)")
+
+    checked = len(list(PKG_DIR.rglob("*.py")))
+    bad = len(bad_files)
+    return max(checked - bad, 0), bad, True
+
+
+def check_import():
+    proc = subprocess.run(
+        [sys.executable, "-c", f"import {PACKAGE}"],
+        cwd=ROOT, capture_output=True, text=True,
+        encoding="utf-8", errors="replace",
+    )
+    if proc.returncode == 0:
+        return 1, 0, True
+    tail = (proc.stderr.strip().splitlines() or ["(no stderr)"])[-1]
+    print(f"  [FAIL] import {PACKAGE}: {tail}")
+    return 0, 1, True
+
+
+SECTIONS = {"syntax": check_syntax, "mypy": check_mypy, "import": check_import}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", default=",".join(SECTIONS))
+    ap.add_argument("--skip", default="")
+    args = ap.parse_args()
+
+    only = {s.strip() for s in args.only.split(",") if s.strip()}
+    skip = {s.strip() for s in args.skip.split(",") if s.strip()}
+    unknown = (only | skip) - SECTIONS.keys()
+    if unknown:
+        print(f"unknown sections: {', '.join(sorted(unknown))}", file=sys.stderr)
+        return 2
+
+    total_ok = total_bad = 0
+    print(f"# check_all - FASE 3 - {ROOT}\n")
+
+    for name in (s for s in SECTIONS if s in only and s not in skip):
+        print(f"## {name}")
+        ok, bad, available = SECTIONS[name]()
+        if not available:
+            print("  [SKIP] mypy not installed (python -m pip install mypy)\n")
+            continue
+        print("  " + fmt(name, ok, bad) + "\n")
+        total_ok += ok
+        total_bad += bad
+
+    total_line = f"TOTAL checked={total_ok + total_bad} ok={total_ok} failed={total_bad}"
+    print(total_line)
+
+    TRAIL.mkdir(exist_ok=True)
+    stamp = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log = TRAIL / f"fase3_{stamp}.log"
+    log.write_text(f"### fase3 - {total_line}\n", encoding="utf-8")
+    print(f"log: {log.relative_to(ROOT)}")
+
+    return 1 if total_bad else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
