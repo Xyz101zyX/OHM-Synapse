@@ -1,9 +1,10 @@
+OHM-Synapse
 Epistemic digital twin — layered personal memory, 3-stage pipeline, P2P sync with E2EE.
 Focus: zero hallucination in personal queries.
 
 ⚠️ Research artifact (v0.0.3). Not a product. No peer review.
 
-Tests
+[![tests](https://github.com/Xyz101zyX/OHM-Synapse/actions/workflows/tests.yml/badge.svg)](https://github.com/Xyz101zyX/OHM-Synapse/actions/workflows/tests.yml)
 
 Results (benchmark v3, n=120)
 Metric
